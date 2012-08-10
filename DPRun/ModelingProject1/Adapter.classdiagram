@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7707efda-e8cd-4fac-8ae1-aa59c193dc6e" name="Adapter" linkedPackageId="ee45927d-3698-42a9-81ed-ac6952e86544" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="b2248599-a414-4d0e-a8c2-d61d93841ee2">
+      <profileInstance Id="81715c15-0ac2-496f-a6dd-809a05790137" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2d430050-756b-445f-9b4d-caa91dd68b7d">
+      <profileInstance Id="3f0f13eb-00c1-4e92-891f-4a87c95854b1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="2e341e0d-6e6d-4efe-8c50-0ae93e457f81" name="ITarget" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="81c227e8-81f0-484a-a174-3e2903287f87" />
+        <ownedOperations>
+          <operation Id="cbd69153-cb5b-4f23-8d35-c3a6483c6e3a" name="OperateA" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ce3d23fd-69a8-41e6-b217-8d1a0eb0c499" />
+          </operation>
+          <operation Id="5583c972-0c5b-4e6f-af92-2069b577e08c" name="OperateB" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="79ea1ed8-c862-4962-8b9a-51f8d73462f0" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dc1ea7c7-7c44-4f33-8563-d10e9f3f44d1" name="Adaptee" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bcb31b47-a219-4631-9d3c-cd2db5e924b5" />
+        <ownedOperationsInternal>
+          <operation Id="58f175fa-173b-4cde-b124-fce77e0b90c1" name="Operate1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="08fb7016-52ff-496e-a567-24f54ae16efe" />
+          </operation>
+          <operation Id="ea8a6cb8-6eb1-4eb2-8963-d2ffefbd167a" name="Operate2" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="50a61c2a-69f7-4d3a-86d5-82e60b2b3146" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4cd9214c-a4f5-4c3f-8995-57b87bce4720" name="ClassAdapter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="aa237083-f463-444c-b82c-13646bd89634" />
+        <suppliersInternal>
+          <interfaceRealization Id="c1f03504-4f71-46e2-b5a6-7802a0a56b08">
+            <interfaceMoniker Id="2e341e0d-6e6d-4efe-8c50-0ae93e457f81" LastKnownName="ITarget" />
+            <description>实现</description>
+            <elementDefinition Id="bf4e2215-f31c-49c9-be3b-ff84599db721" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="8d96c48c-b3db-4f62-a96a-90ffae3a8bf2" isSubstitutable="false">
+            <classMoniker Id="dc1ea7c7-7c44-4f33-8563-d10e9f3f44d1" LastKnownName="Adaptee" />
+            <elementDefinition Id="aeb85737-bdb2-4713-8038-8d28791cfb63" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="f985091c-e732-472e-b711-ec328209d932" name="OperateA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d390d453-baa7-4a8a-ac71-2f509d1ee7d7" />
+          </operation>
+          <operation Id="dcb702b5-00f4-45e0-9361-604596c4f187" name="OperateB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="54f63d40-3921-44b9-b0d1-42a5dfcaefb2" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="e86621a2-07de-4dab-a3ad-94464ab3655b" name="Itarget" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f92b3e21-4a9e-417c-9ac3-04f55e99cea5" />
+        <ownedOperations>
+          <operation Id="940456ab-f20c-4f8d-8632-a099b2029e42" name="OperateA" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cbee5195-170c-447b-8c18-09eb7e0d7738" />
+          </operation>
+          <operation Id="368f92e0-9e7a-458c-86e2-cb1540f8244d" name="OperateB" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0da52389-ffa1-4725-a9c2-0b1313b8beae" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="905c7d18-7bc7-43f7-824d-1a0583406fcb" name="Adaptee" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="641a56ca-fdbf-48de-ae26-34d3eacda3aa" />
+        <ownedOperationsInternal>
+          <operation Id="a2515da5-4da8-4571-ae6d-92d0f7b1fe88" name="Operate1" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2009c5d9-e536-4676-aaf5-d7444ca7bcf3" />
+          </operation>
+          <operation Id="09899864-fb79-4dd3-83f4-b563ba417d7f" name="Operate2" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3484c8fc-6df1-4f44-b6cc-5eb9df4160fc" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="06cd3aba-dde6-44ad-9edd-bb0f8de3a017" name="ObjectAdapter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8585b4b2-4764-4eab-8a55-1bae29da23fe" />
+        <suppliersInternal>
+          <interfaceRealization Id="f7d711a0-6511-413b-acf2-aa2f64d4e267">
+            <interfaceMoniker Id="e86621a2-07de-4dab-a3ad-94464ab3655b" LastKnownName="Itarget" />
+            <elementDefinition Id="3bb63e62-eeb3-49dc-84af-05b8b8d737ee" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="3997c162-8c6e-4682-9a4b-cea9bcdddf51" isSubstitutable="false">
+            <classMoniker Id="905c7d18-7bc7-43f7-824d-1a0583406fcb" LastKnownName="Adaptee" />
+            <elementDefinition Id="924422ff-3668-4eab-bba6-41434334817d" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="514c859e-0a39-4d55-8417-c6c5c26bdbf9" name="adaptee" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eaa38dc5-0837-4315-b058-7e21952b474a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3618811f-0828-407d-91e7-ce0bb20d9592" LastKnownName="Adaptee" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="df9cca10-7dc5-4c1f-8ac1-f2501b13edd4" name="OperateA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="56f08f81-6815-4f54-a73e-db6fcc074c47" />
+          </operation>
+          <operation Id="46a81940-df60-4088-9d7f-59745bc92e8c" name="OperateB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a084c110-8aa1-412b-a954-08e4f16929dd" />
+          </operation>
+          <operation Id="1cb13ce3-82e6-448e-a0f2-b04aa3735405" name="ObjectAdapter" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="18097835-1be1-4f14-8097-8a662ceafa2c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2f32e400-4df8-4af4-a9fc-b5e73392bf66" name="adaptee" direction="In" isUnique="false">
+                  <elementDefinition Id="e0dbefe6-760b-4041-ae34-cf0aaa2b8728" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="cba0be7f-35b8-47d6-a1b4-936f9645d9d5" LastKnownName="Adaptee" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="3618811f-0828-407d-91e7-ce0bb20d9592" name="Adaptee" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Adaptee">
+        <elementDefinition Id="bcb31b47-a219-4631-9d3c-cd2db5e924b5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cba0be7f-35b8-47d6-a1b4-936f9645d9d5" name="Adaptee" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Adaptee">
+        <elementDefinition Id="641a56ca-fdbf-48de-ae26-34d3eacda3aa" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="ee45927d-3698-42a9-81ed-ac6952e86544" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>

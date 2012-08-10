@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Singleton">
+  <logicalClassDesignerModelMoniker Id="19e80e50-5de3-45f6-b6de-cbeb5a5d1cfb" />
+  <nestedChildShapes>
+    <classShape Id="86308d77-f23a-488f-b701-a1f54286eba3" absoluteBounds="3.5, 1.75, 1.875, 1.4270019531249996" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="df7687db-abdb-4f5a-a90e-2a4f2d70c7b8" LastKnownName="Singleton" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="729e3779-27b6-4d65-a572-e9f2ba7b7fac" absoluteBounds="3.515, 2.14, 1.8450000000000002, 0.37974039713541663" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="6efc975f-3744-4905-af9e-dccb21a1a473" absoluteBounds="3.515, 2.5297403971354164, 1.8450000000000002, 0.54726155598958326" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

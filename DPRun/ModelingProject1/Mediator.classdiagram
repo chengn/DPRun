@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="6ae7d303-824c-40b8-97e8-fd775c407aac" name="Mediator" linkedPackageId="96b7a0eb-7742-40c3-ab6d-987e4d5930ad" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="4f34fa06-7433-4033-aa4c-421ac055ec85">
+      <profileInstance Id="ef0ccce9-afbf-4b73-a01c-ab979214d7ff" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c82c9d9e-6f15-4528-bf99-0d68ba1d5e9b">
+      <profileInstance Id="a470a3ca-5467-4acb-8b79-5a2da907839a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ba5be967-69f5-43f8-8418-3263183990e3" name="Mediator" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9298764d-0c1b-4112-95c3-f4112e841185" />
+        <ownedOperationsInternal>
+          <operation Id="fd015663-f4f5-4b64-b2e1-721cfc6d2c82" name="ColleagueChanged" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d3d00c52-7ef6-4e7c-8f8d-4e82d669abb2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e4b65335-7d95-4e37-967d-189c568ea168" name="c" direction="In">
+                  <elementDefinition Id="03844763-9fb7-49f5-b178-0baf01bf69a3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="757dfc24-0fec-40c1-b0b5-1a9eaac450ee" LastKnownName="Mediator" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ac4549a3-31e3-477d-be52-c758a6f2a481" name="ConcreteMediator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a2233369-1555-4495-8647-264bf73616f6" />
+        <suppliersInternal>
+          <dependency Id="da846c3b-2c6b-4d2e-863b-d729abc991e3">
+            <classMoniker Id="35018dcf-ca4e-43cc-97fe-d8c0e21b2397" LastKnownName="Colleague1" />
+            <elementDefinition Id="d0c80bf4-8e43-4f4e-8208-c23ba0b7cc20" />
+          </dependency>
+          <dependency Id="fbb186df-20b0-4393-ada2-2066c0bc6533">
+            <classMoniker Id="f68feb73-f19a-4df8-a9f7-44ec84dd14c1" LastKnownName="ColleagueN" />
+            <elementDefinition Id="e963bd0b-2def-48f9-9295-8a6f62eeda63" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="1c938eea-86d2-4e55-94f1-56a958abfedd" isSubstitutable="false">
+            <classMoniker Id="ba5be967-69f5-43f8-8418-3263183990e3" LastKnownName="Mediator" />
+            <elementDefinition Id="158474bb-e4e5-425e-85ae-2b8e1fd3a0e0" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="9cb216d1-59c5-4cc1-9866-71e934530a7c" name="c2" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0dadd3d7-19e0-4a50-8d79-7914e90f17af" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fe3380ef-d029-4fbd-a34d-38826ba47da6" LastKnownName="Colleague" />
+            </type_NamedElement>
+          </property>
+          <property Id="95c5dc47-ae5f-4478-a10e-6a15b7e69e29" name="c1" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5f0ff7a3-59ff-4c6f-a7ea-8d58e31f51b0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="73a2216a-352f-477b-b1cc-ffbdcc0d2fd9" LastKnownName="Colleague" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="fcd90b4e-68b8-4d1b-882f-7d539613af74" name="ColleagueChanged" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6bd08d39-428c-4b4f-897e-7b03fac80f33" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6ffc7738-10a6-4674-b4db-aadbc3900b91" name="Colleague c" direction="In" isUnique="false">
+                  <elementDefinition Id="5e3b62a7-997e-49b3-bda5-4b59c8bead3e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="99e22e14-f265-4458-bbd0-8c473e0adfcf" name="Colleague" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="03161cf0-9e33-4772-b89d-11dff0ce258a" />
+        <suppliersInternal>
+          <dependency Id="eeb50b12-8410-4d6e-a3a0-a46649c780f1">
+            <classMoniker Id="ba5be967-69f5-43f8-8418-3263183990e3" LastKnownName="Mediator" />
+            <elementDefinition Id="2021b18e-3a5f-4efc-90b4-91b1b9b145d8" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="a4dc6607-fa46-4962-8832-48137c4e732d" name="mediator" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="64f40545-84ac-4714-8383-1fa186e7e708" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f33f6093-9b7b-42b0-8ae9-460414068a12" LastKnownName="Mediator" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b42cf647-e8f2-45dc-a3d6-5deb0ec187f3" name="Action" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="13f1caf1-2f22-4053-94f5-e5f5c6be5a05" />
+          </operation>
+          <operation Id="ef6dc04a-aa0e-405c-89cf-91394f3d420d" name="Change" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="98aa76bb-ec86-46b7-9d84-910420ff0525" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="757dfc24-0fec-40c1-b0b5-1a9eaac450ee" name="Mediator" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Mediator">
+        <elementDefinition Id="1ed52249-8d0c-41ce-9a7e-e662b2e86fe8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="73a2216a-352f-477b-b1cc-ffbdcc0d2fd9" name="Colleague" isAbstract="false" isLeaf="false" cachedFullName="Colleague">
+        <elementDefinition Id="ccb2c3b1-5c14-4c9f-ae8d-763b2e20def9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fe3380ef-d029-4fbd-a34d-38826ba47da6" name="Colleague" isAbstract="false" isLeaf="false" cachedFullName="Colleague">
+        <elementDefinition Id="ccb2c3b1-5c14-4c9f-ae8d-763b2e20def9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f33f6093-9b7b-42b0-8ae9-460414068a12" name="Mediator" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Mediator">
+        <elementDefinition Id="1ed52249-8d0c-41ce-9a7e-e662b2e86fe8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="35018dcf-ca4e-43cc-97fe-d8c0e21b2397" name="Colleague1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="68606af8-3c84-4697-9b29-7b96f13f15a9" />
+        <generalsInternal>
+          <generalization Id="cc277c66-7ddc-4822-89a8-3562f4e0b8a1" isSubstitutable="false">
+            <classMoniker Id="99e22e14-f265-4458-bbd0-8c473e0adfcf" LastKnownName="Colleague" />
+            <elementDefinition Id="be2eadbc-d624-4cc6-8017-1cc320c09730" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="5bf8ed76-6df2-435e-89dc-f1f397d844fa" name="Action" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d41574f6-7129-4d53-82c8-a84ee2e68418" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f68feb73-f19a-4df8-a9f7-44ec84dd14c1" name="ColleagueN" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="de8c4f67-6691-4150-a109-bec84fcf5319" />
+        <generalsInternal>
+          <generalization Id="de58e416-c5ce-4ebb-8a7d-371f426f7edb" isSubstitutable="false">
+            <classMoniker Id="99e22e14-f265-4458-bbd0-8c473e0adfcf" LastKnownName="Colleague" />
+            <elementDefinition Id="1ad1cd4a-3f77-4605-851e-1b1373f416aa" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="48cb68e7-4e0a-4ed1-9731-9f823a2a20a4" name="Action" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2c56fbfb-34ea-4ab0-ac0e-6ef94d96bf57" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="96b7a0eb-7742-40c3-ab6d-987e4d5930ad" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>

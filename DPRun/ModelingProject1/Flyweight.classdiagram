@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3a9e4430-3606-49a7-b53d-2dc238a331be" name="Flyweight" linkedPackageId="79fcc585-deba-465b-9681-0f40679f3c7b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="e088a7f0-d5f6-4d03-a6ea-21cc76f435fb">
+      <profileInstance Id="fbfd3b51-061b-4d4d-a365-43f8291ecb73" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="edf78bd8-7e07-4397-b427-02daefdce135">
+      <profileInstance Id="6d717f6a-1fee-4283-bbeb-189c3df0ed33" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="257efb2c-5af5-486d-b4b7-ebb36f28c916" name="IFleweight" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b83e6c0b-49cb-4c5f-be1b-0b066ab82339" />
+        <ownedOperations>
+          <operation Id="c68abccf-14f1-48c5-9a43-5668305c283a" name="Method()" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ae967c50-5f7c-42a6-9764-102619a24d34" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="23cc52a1-ef45-439c-83ef-179ad605a183" name="extrinsicState" direction="In" isUnique="false">
+                  <elementDefinition Id="1b78608c-c357-4eb3-96ba-d3d99d8b9ee4" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="64f2c21a-73ad-4ec3-b081-653d0a5e3938" name="FlyweightA" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d7b779b9-2020-4556-9bfc-f53280963afa" />
+        <suppliersInternal>
+          <interfaceRealization Id="ada704a1-5e66-43e1-af2e-edc4d2ad6246">
+            <interfaceMoniker Id="257efb2c-5af5-486d-b4b7-ebb36f28c916" LastKnownName="IFleweight" />
+            <elementDefinition Id="68d81ce1-d0ba-431d-b521-594eaa75c308" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="eae36c98-3664-4c0e-ab75-8beb51b7a70d" name="instrinsicState" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="30980016-8635-4dbe-81e9-c591d26be822" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ad6ab150-2bac-48cd-a99f-235f38c6051b" name="Method()" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5d13c6c8-5a09-4cee-9f0d-a92110cf6f65" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1be6a8d0-bce1-424d-b418-e921b13c3362" name="extrinsicState" direction="In" isUnique="false">
+                  <elementDefinition Id="9f95e7d4-48fe-4390-989e-ff68587b019d" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="da4b98fa-07a3-4650-ab1b-a04a73459179" name="FlyweightA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8e40799c-64b3-476f-b7f3-cdd35b952210" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="da108ee7-c4dd-4eed-ad88-7685e9a3cef0" name="inState" direction="In" isUnique="false">
+                  <elementDefinition Id="d774e773-ce0d-4f87-80cb-92485333c02c" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="89771f95-110a-4f7b-91fd-ae5a57ebcaaa" name="Factory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c67a0b68-243d-4f7a-a94a-cc75068396d0" />
+        <suppliersInternal>
+          <dependency Id="27fb57f0-407f-4f3d-98ee-e6f0cb696627">
+            <interfaceMoniker Id="257efb2c-5af5-486d-b4b7-ebb36f28c916" LastKnownName="IFleweight" />
+            <elementDefinition Id="963b0cd5-7636-4731-9923-246eef4042f3" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="f63ae6d7-638d-4b60-8146-146fb5e8cadc" name="pools" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="97375437-b08a-40df-aa72-785ff4aa5fbf" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="623b43cb-d2f5-4b5c-8771-541e4d5f8826" name="GetFlyweight" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="69eead8e-eacb-44c6-b675-b385bdc634c2" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4b90a2e1-f064-4c3f-92cb-6e4ca03d29f6" name="key" direction="In">
+                  <elementDefinition Id="45aa1e84-f139-4a47-9d06-a197d6df861e" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="79fcc585-deba-465b-9681-0f40679f3c7b" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="cf047463-70fa-479c-9dc4-dd848777cf5f" name="Proxy" linkedPackageId="d8239ae1-c4d6-44da-859c-911ed3513f10" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="ba16fea9-8356-49fb-85f2-f312effb65ae">
+      <profileInstance Id="8f7993b2-b96a-40fd-b946-77202b22c51d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d9308ca3-aec0-4e7d-9f29-1e4da45edc13">
+      <profileInstance Id="f6344b01-92f9-402d-92eb-618e620714af" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="d6f45d4c-fdcd-422e-aa67-99a5f799eec2" name="Subject" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9f6aa854-57bc-464e-bf5c-df9db33f4e2a" />
+        <ownedOperations>
+          <operation Id="12e23026-2dd8-4b73-bbe1-f4191d1943ff" name="Request" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="98139858-0a6d-478f-a53b-77fe9a4d8459" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="49c07c83-4580-4cf7-9d40-a468be573b53" name="RealSubject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="875750f1-cd12-4ef2-89e6-c0a5b6baabf2" />
+        <suppliersInternal>
+          <interfaceRealization Id="2c24ecf8-8b81-49c4-9b1a-d667513bb14c">
+            <interfaceMoniker Id="d6f45d4c-fdcd-422e-aa67-99a5f799eec2" LastKnownName="Subject" />
+            <elementDefinition Id="532a48e5-486d-4d99-bff8-89088e6b1b1b" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="10727f15-896c-4407-8d08-b60a80f36b73" name="Request" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3b03ea84-e145-45ec-9e98-816c51914ebe" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e0c36349-1637-4e5c-afc8-7b5e2d7f570c" name="ProxySubject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b83d1a5b-8cd4-4207-ba38-728e341f3f39" />
+        <suppliersInternal>
+          <interfaceRealization Id="4c196b5e-95fe-4462-9def-0dd75d98af8e">
+            <interfaceMoniker Id="d6f45d4c-fdcd-422e-aa67-99a5f799eec2" LastKnownName="Subject" />
+            <elementDefinition Id="e2f9a54f-f078-4a0e-b787-529487054d70" />
+          </interfaceRealization>
+          <dependency Id="5585f348-a333-4cc7-ba73-081d941904fb">
+            <classMoniker Id="49c07c83-4580-4cf7-9d40-a468be573b53" LastKnownName="RealSubject" />
+            <elementDefinition Id="66654918-46c1-4428-bde4-e136803e67b5" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="31886ec1-a852-46a2-b685-17ffa9e2a040" name="realSubject" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f68e5360-6728-4ff8-8c22-bb919a6315f2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="dc03f7b5-d03f-4e89-843c-1b4cd1871c13" LastKnownName="RealSubject" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1117c0cb-433b-4a3e-9dc9-5a62a99844d0" name="Request" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="98a3bb1b-b93d-4820-a916-f300b9e99d5f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="dc03f7b5-d03f-4e89-843c-1b4cd1871c13" name="RealSubject" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::RealSubject">
+        <elementDefinition Id="875750f1-cd12-4ef2-89e6-c0a5b6baabf2" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="d8239ae1-c4d6-44da-859c-911ed3513f10" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="c24fab1a-bd4a-4d06-a113-9c32648c5622" name="TemplateMethod" linkedPackageId="508c05d8-a28c-4351-a3ef-7e6cff63429c" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8d3a46a0-4632-491b-9c15-be40b24c79ec">
+      <profileInstance Id="91d374ec-b6bf-4a52-a326-4c312152226c" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="bfc0d0d5-8e08-4bd0-b9c4-978a4045b05a">
+      <profileInstance Id="3620529c-9ae2-4551-bbfe-e31680704a5b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1739aa5f-1716-4d8f-9ef3-62aec2381b4e" name="AbstractClass" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5420e3ce-436a-403a-847f-d171fb4a8780" />
+        <ownedOperationsInternal>
+          <operation Id="2e37470b-1ad7-42e3-a6ea-b52eaf6bc68f" name="TemplateMethod" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4cba4d73-b74f-4f0e-9f7b-19604659de6e" />
+          </operation>
+          <operation Id="5c418e2d-d1fb-421d-89f5-313e5d073d2a" name="PrimitiveMethod1" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cf9a985e-ad70-46b4-bf58-5baaee437062" />
+          </operation>
+          <operation Id="e093aa31-9f24-48b9-914d-fb727393b3f6" name="PrimitiveMethod2" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c6a3a54c-8f7a-4ff5-a16e-76bd39a2cd2d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="896b5fc5-941b-4473-851e-d9375ac77d49" name="ConcreteClass" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="116bf3c4-5ea8-4657-85f7-d1580c86fa57" />
+        <generalsInternal>
+          <generalization Id="29865986-99ae-4544-a3a5-541d8f2a4b06" isSubstitutable="false">
+            <classMoniker Id="1739aa5f-1716-4d8f-9ef3-62aec2381b4e" LastKnownName="AbstractClass" />
+            <elementDefinition Id="b61b04d5-b7d8-4663-9d2e-eac0926b2889" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="14223ccf-e1de-4afd-81f2-dfaf739186f3" name="PrimitiveMethod1" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="02d1fbab-de43-46de-bc18-8c5d9198006d" />
+          </operation>
+          <operation Id="e59117d0-bd33-4511-aa71-9a13dfe66eb5" name="PrimitiveMethod2" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="73c81600-4827-45ec-a430-f57a32ced618" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="508c05d8-a28c-4351-a3ef-7e6cff63429c" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>

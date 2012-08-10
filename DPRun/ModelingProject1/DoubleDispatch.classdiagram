@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="79023480-6cd5-42bb-bb59-f772cc3768c4" name="DoubleDispatch" linkedPackageId="8e5e9fd0-6022-4133-bb2f-9e2fb6cce861" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="73edba81-0189-425f-af29-9f19bdd16beb">
+      <profileInstance Id="68ba1911-6d43-4e8d-b871-47bc78384cf7" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="18c3e9e1-3a62-4169-aa17-6dc65cb4d325">
+      <profileInstance Id="b14f1688-0a2a-442c-844f-964cca4c6dba" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="707a5ff9-d448-483a-aa32-338535136d8e" name="Letter" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="30f948da-a152-4cf6-814a-90d8c43d3f20" />
+        <ownedOperations>
+          <operation Id="cb0720fb-be20-47db-be68-d6333c2266e3" name="Show" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b5a7a0ed-6550-4bf4-bf3e-256feea490ec" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="a2acbf0d-eb53-45ae-9f88-2ccbd6e6c27b" name="Number" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fba66eca-f5a7-443e-94aa-3e8d1a7c781f" />
+        <ownedOperations>
+          <operation Id="9acef744-6b54-4d70-9a14-6fb0eafd86e4" name="Show" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f96fe8a6-6ebe-44ba-a3b2-b19d545a93b4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="966b27dd-6fb5-494c-810a-def723d94ccd" name="Cletter" direction="In">
+                  <elementDefinition Id="bca2a48b-9d16-424d-b6c0-e0b7bf8a4d1a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="30b8869b-80e6-4435-b76c-78ef0fc997ab" LastKnownName="CapitalLetter" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8ecad21e-1b5b-4168-94bf-2d5671ab30d4" name="Show" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1f9c5060-497b-4711-bc7b-1e131337f11f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="71b1570a-4501-4947-9938-412a331816bc" name="Sletter" direction="In">
+                  <elementDefinition Id="8fd306d2-80ea-4efc-bacb-c365f12f083e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="90c14697-ed38-4df9-a4b4-91f4d2670da2" LastKnownName="SmallLetter" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4b82bec4-0e8e-4fdf-aba2-23246d1ccd84" name="CapitalLetter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="16fdf902-5301-456f-a69e-96f4c2e3f0c1" />
+        <suppliersInternal>
+          <interfaceRealization Id="2f064fd9-40fe-468c-b576-eb20c25f917f">
+            <interfaceMoniker Id="707a5ff9-d448-483a-aa32-338535136d8e" LastKnownName="Letter" />
+            <elementDefinition Id="f335d6e3-a3f0-44c3-b0b6-9a20589fb894" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="f060d88e-1cab-4968-8fb3-ecc8465bf916" name="Show" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="de20749d-ee3a-42b7-9184-573fbdd5c40f" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e7ed32bb-c870-45c0-bfb9-1e6a0727ad9e" name="SmallLetter" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c7faf6f8-9293-45ca-88a0-33d23796e141" />
+        <suppliersInternal>
+          <interfaceRealization Id="0440bf69-522f-4160-baed-a089d6b9e6d2">
+            <interfaceMoniker Id="707a5ff9-d448-483a-aa32-338535136d8e" LastKnownName="Letter" />
+            <elementDefinition Id="522ccee0-0908-49ae-b7ed-85146b1cf5e2" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="b1964831-1029-4827-9613-0333701aa05e" name="Show" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d4b62de7-f9c7-4b6f-bf62-172b45302685" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="09919dcc-4116-4e63-9e44-524f8bb158ab" name="ChNumber" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cc68aca0-ab1b-45db-a425-e36cb672ec77" />
+        <suppliersInternal>
+          <interfaceRealization Id="3d28d3c0-1312-4d01-b8db-db8034e033f3">
+            <interfaceMoniker Id="a2acbf0d-eb53-45ae-9f88-2ccbd6e6c27b" LastKnownName="Number" />
+            <elementDefinition Id="b04d36c4-8279-40c0-91f5-57c18a4c9c3f" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="cea0dfb1-25a3-47f3-8bb5-a35fc3768a8d" name="Show" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3612ecbc-ada5-4ae5-b06c-f570a6a8417e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5ef82e2b-1db2-4d75-8677-d60bbc0488da" name="Cletter" direction="In">
+                  <elementDefinition Id="11287b6b-5d92-43ed-9cb0-cf38922b6c80" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="30b8869b-80e6-4435-b76c-78ef0fc997ab" LastKnownName="CapitalLetter" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="65d3df0c-8be2-4be1-8d2e-210b41e37df3" name="Show" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="63ea8210-d18b-4cb3-a9a4-660ead0522ba" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a632a106-8331-4ef4-b6e5-c5193d059edd" name="Sletter" direction="In">
+                  <elementDefinition Id="2ead3376-1f21-4358-95fa-1944a6a04a03" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="90c14697-ed38-4df9-a4b4-91f4d2670da2" LastKnownName="SmallLetter" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f7037552-7858-44aa-b56a-25e7f9ed7673" name="EnNumber" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c130e8fc-c685-4b22-9b1a-7b6655c74140" />
+        <suppliersInternal>
+          <interfaceRealization Id="f6bfcdec-d18b-4b86-86d2-3e6a4d3159c8">
+            <interfaceMoniker Id="a2acbf0d-eb53-45ae-9f88-2ccbd6e6c27b" LastKnownName="Number" />
+            <elementDefinition Id="5d82aec0-0438-4ab2-a623-ec692853ed05" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="a0abc9a4-eec6-486b-9a5d-b191a34efacc" name="Show" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="db328087-8fa5-4638-a1bc-dd3ff004c423" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e608d569-72e9-44cd-8910-4c95d8abb769" name="Cletter" direction="In">
+                  <elementDefinition Id="2be3df35-023a-4be3-ab67-dc24075e29c3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="30b8869b-80e6-4435-b76c-78ef0fc997ab" LastKnownName="CapitalLetter" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="180dc602-20c7-4027-ab2c-2ec561085f6e" name="Show" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b62ca765-f925-4e0c-962f-ef267dc3731f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="eba37cd3-ea07-42b7-b3e5-f8e7941302d7" name="Sletter" direction="In">
+                  <elementDefinition Id="f55e7b63-c93a-4188-b134-369315621c9c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="90c14697-ed38-4df9-a4b4-91f4d2670da2" LastKnownName="SmallLetter" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="30b8869b-80e6-4435-b76c-78ef0fc997ab" name="CapitalLetter" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::CapitalLetter">
+        <elementDefinition Id="16fdf902-5301-456f-a69e-96f4c2e3f0c1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="90c14697-ed38-4df9-a4b4-91f4d2670da2" name="SmallLetter" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::SmallLetter">
+        <elementDefinition Id="c7faf6f8-9293-45ca-88a0-33d23796e141" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="8e5e9fd0-6022-4133-bb2f-9e2fb6cce861" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>

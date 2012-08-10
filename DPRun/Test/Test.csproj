@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB8195F2-B8C4-40E6-B08F-EE641E07AA48}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DP.Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactoryTest.cs" />
+    <Compile Include="AdapterTest.cs" />
+    <Compile Include="BridgeTest.cs" />
+    <Compile Include="BuilderTest.cs" />
+    <Compile Include="ChainOfResponsibilityTest.cs" />
+    <Compile Include="CommandTest.cs" />
+    <Compile Include="CompositeTest.cs" />
+    <Compile Include="DecoratorTest.cs" />
+    <Compile Include="DefaultAdapterTest.cs" />
+    <Compile Include="FacadeTest.cs" />
+    <Compile Include="FactoryMethodTest.cs" />
+    <Compile Include="FlyWeightTest.cs" />
+    <Compile Include="InterpreterTest.cs" />
+    <Compile Include="IteratorTest.cs" />
+    <Compile Include="MediatorTest.cs" />
+    <Compile Include="MementoTest.cs" />
+    <Compile Include="ObserverTest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtoTypeTest.cs" />
+    <Compile Include="ProxyTest.cs" />
+    <Compile Include="SimpleFactoryTest.cs" />
+    <Compile Include="SingletionTest.cs" />
+    <Compile Include="StateTest.cs" />
+    <Compile Include="StrategyTest.cs" />
+    <Compile Include="TemplateMethodTest.cs" />
+    <Compile Include="VisitorTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractFactory\AbstractFactory.csproj">
+      <Project>{26BFC2ED-B709-461B-8322-07F87FB704F2}</Project>
+      <Name>AbstractFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Adapter\Adapter.csproj">
+      <Project>{C8CA7701-1C0A-4A16-A08C-408C5D4E6CFB}</Project>
+      <Name>Adapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bridge\Bridge.csproj">
+      <Project>{6475E179-7081-4274-A5F6-B5DACCA8BA1A}</Project>
+      <Name>Bridge</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Builder\Builder.csproj">
+      <Project>{37C64A3F-3250-4B0C-B870-AC93585FF1C1}</Project>
+      <Name>Builder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChainOfResponsibility\ChainOfResponsibility.csproj">
+      <Project>{547048BE-EBC1-4768-A3B6-268F273EF237}</Project>
+      <Name>ChainOfResponsibility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Command\Command.csproj">
+      <Project>{DB2DE2DB-7C38-4949-B7EE-1D13727A1C44}</Project>
+      <Name>Command</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Composite\Composite.csproj">
+      <Project>{5E116C19-CEBF-4C63-A5A4-2500AB4315CB}</Project>
+      <Name>Composite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Decorator\Decorator.csproj">
+      <Project>{B6070CDE-DB6D-4A2D-9188-0E5E068A053E}</Project>
+      <Name>Decorator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DefaultAdapter\DefaultAdapter.csproj">
+      <Project>{2D8E3A28-4ADA-4A63-8195-784770D217B2}</Project>
+      <Name>DefaultAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Facade\Facade.csproj">
+      <Project>{18EE104A-2E31-40DC-B553-F312E387A138}</Project>
+      <Name>Facade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj">
+      <Project>{4A4579B6-B645-44EC-AE8E-A8668DE2EBD5}</Project>
+      <Name>FactoryMethod</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Flyweight\Flyweight.csproj">
+      <Project>{0976B92E-BCE0-4D1E-A970-B4346E4FA8C2}</Project>
+      <Name>Flyweight</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iterator\Iterator.csproj">
+      <Project>{6501C970-D18D-4A5B-8139-3ED9A9BA8C75}</Project>
+      <Name>Iterator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mediator\Mediator.csproj">
+      <Project>{899A7A28-BCFE-41A1-ABD4-A81C817F8A6B}</Project>
+      <Name>Mediator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Memento\Memento.csproj">
+      <Project>{E4469788-B33B-4198-B979-09DB74421F5B}</Project>
+      <Name>Memento</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Observer\Observer.csproj">
+      <Project>{D779A845-E044-4E6A-8B97-F81E8DA3C535}</Project>
+      <Name>Observer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prototype\Prototype.csproj">
+      <Project>{AFCE1510-0BBF-482B-9B18-45CCBEB0C88C}</Project>
+      <Name>Prototype</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Proxy\Proxy.csproj">
+      <Project>{A7E3203F-B393-4D6A-9EA0-723E420B1F7F}</Project>
+      <Name>Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleFactory\SimpleFactory.csproj">
+      <Project>{EBB127DE-FE7E-4110-8FDF-961E9EE74329}</Project>
+      <Name>SimpleFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\State\State.csproj">
+      <Project>{DD21E738-2DA7-4765-A444-9F2333873190}</Project>
+      <Name>State</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Strategy\Strategy.csproj">
+      <Project>{612C5A4A-6D77-4C23-AC31-19C4869883B4}</Project>
+      <Name>Strategy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TemplateMethod\TemplateMethod.csproj">
+      <Project>{FCCA1D3C-7C3B-404C-9ED5-3E29668F4A93}</Project>
+      <Name>TemplateMethod</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Visitor\Visitor.csproj">
+      <Project>{842CC03A-6F33-4A03-B6E4-D23B23A4B64D}</Project>
+      <Name>Visitor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

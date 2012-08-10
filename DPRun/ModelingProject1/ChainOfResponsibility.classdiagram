@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="8058e1fa-178c-4275-aedf-f279e8590a2f" name="ChainOfResponsibility" linkedPackageId="f6991b5b-dab0-440b-93c7-95755f968c9b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bf1bf088-1acc-4bef-ba8d-9af9e0d27b3a" name="Handle" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="56b6b05b-22e5-4e5f-a37c-4c94e2b0d8d9" />
+        <ownedAttributesInternal>
+          <property Id="bf125c47-f154-47b3-9163-2511ad5fae2c" name="next" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f9d856cc-1aec-4157-ad92-2d17d9ec5244" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b1b4594c-d2b4-4aaa-ae7d-231c5333f529" LastKnownName="Handle" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="aebd5635-c7a5-4f5e-a0b5-20a4f768eb6c" name="HandleRequest" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="62c91dba-0c18-4413-8fb6-4528dab0d973" />
+          </operation>
+          <operation Id="5b3cfd3f-984b-45e5-9055-a02d3e64d46c" name="SetNext" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4d579105-54ff-4c89-bb80-83edd41e0f82" />
+          </operation>
+          <operation Id="297e0086-9c6f-4f42-b93f-af5e5fb63eb1" name="GetNext" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="966997ed-89e1-4248-9826-f29f55b28dbf" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="baeab5e7-8bbe-48ea-9fac-3084a37e7eaf" name="ConcreteHandle" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="aec1b114-e431-4f7a-a1b7-cf1524a3209b" />
+        <generalsInternal>
+          <generalization Id="7ea8d03b-ddc9-45c8-8b08-5b969d55b038" isSubstitutable="false">
+            <classMoniker Id="bf1bf088-1acc-4bef-ba8d-9af9e0d27b3a" LastKnownName="Handle" />
+            <elementDefinition Id="684d0f21-cda0-4486-b743-7225931623b3" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="b5065b7d-f3fe-4522-a42a-0d348e243c44" name="HandleRequest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="523a695e-061d-44e6-b3cd-d54389d111bd" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="84f1cf08-730a-4320-890c-66e49e57fe71" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c284d1aa-d19f-4934-9bf9-7b8e39cd7ea5" />
+        <targetEnds>
+          <association Id="ddce08cc-f666-40ce-9eb7-eeb19b43d89f" isDerived="false" sourceEndRoleName="Client" targetEndRoleName="Handle" isLeaf="false" isAbstract="false">
+            <classMoniker Id="bf1bf088-1acc-4bef-ba8d-9af9e0d27b3a" LastKnownName="Handle" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b342f26-0264-41ce-92b0-118263abdc55" name="Client" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="aeed7612-f879-4852-8907-d0a4d351c496" name="Lower" value="1">
+                      <elementDefinition Id="3ec1dfe1-7d45-4283-9bd5-e91c20b6f4c0" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="adce7cdc-b17a-418b-9a5d-f4f85895ad47" name="Upper" value="1">
+                      <elementDefinition Id="56ec43af-7fc8-4bfa-b9c8-cc03c27cf281" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b504b98e-ab69-427a-819b-8688c98e3b1a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a5d10261-c817-41be-be20-9dc518b757e6" name="Handle" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="fc31f1fe-4480-468c-9fe7-3f1cd190f636" name="Lower" value="*">
+                      <elementDefinition Id="1dff4255-80a1-44aa-b2c4-7b95d170702e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="1b426c25-129f-4863-93cf-1d529ec6a0f4" name="Upper" value="*">
+                      <elementDefinition Id="92b85124-4223-48e8-9dab-53a2b8d0782c" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c154860e-b007-4d35-97fa-1f1e5f46f787" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a76c4ec9-3803-479e-9631-35681161a627" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="a75a8bcb-d84c-47ab-ab1c-23e2dc8d7bfc" name="handle" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4318d51b-ed1a-4744-8ea1-5fbf4322bb5e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e905b300-6076-4017-974a-3ca715364fe6" LastKnownName="Handle" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b1b4594c-d2b4-4aaa-ae7d-231c5333f529" name="Handle" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Handle">
+        <elementDefinition Id="56b6b05b-22e5-4e5f-a37c-4c94e2b0d8d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e905b300-6076-4017-974a-3ca715364fe6" name="Handle" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Handle">
+        <elementDefinition Id="56b6b05b-22e5-4e5f-a37c-4c94e2b0d8d9" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="f6991b5b-dab0-440b-93c7-95755f968c9b" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+    <profileInstances>
+      <packageHasProfileInstances Id="c2cd6f4c-175f-4fe3-be38-8fbe228572ca">
+        <profileInstance Id="38045a32-216c-480b-b031-b525be1f9097" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7e866be1-612c-4cdc-8dc5-4f2eaaccf0ed">
+        <profileInstance Id="97cb2e01-c2a1-4e0b-a899-35970c4f4c81" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

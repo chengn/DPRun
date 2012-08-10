@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="649577d1-a583-488a-b62b-110311c706f9" name="State" linkedPackageId="8e4ed5c9-69fd-4090-a14a-d8a8c039a263" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="7453695e-3352-4fac-b653-c701d67f1424" name="IState" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="febfb754-0930-4e74-8434-5c635f247dde" />
+        <ownedOperations>
+          <operation Id="86cbbff6-fbb5-4699-94b0-07021cb7b96c" name="Method" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a96a7156-d627-4f70-abd9-fd3a4ffebd71" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c24804fd-2e77-4fa3-9eea-0fd15f6215bd" name="StateImpl_1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ceb86ed9-0987-4d21-9901-598e2a301f3a" />
+        <suppliersInternal>
+          <interfaceRealization Id="9fc3dc59-303e-465b-b42c-5688bf1a2145">
+            <interfaceMoniker Id="7453695e-3352-4fac-b653-c701d67f1424" LastKnownName="IState" />
+            <elementDefinition Id="f4fe1a87-de64-4e59-85b9-6a02d9b347d1" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="bf8a2b54-cfce-4643-b3fc-ac105dad7d3c" name="Method" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f8861631-20c1-40fc-aba5-acfbd973f356" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="37d48782-f4ea-4437-8c1e-be53db5b7dab" name="StateImpl_N" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="70bdff3c-6f2d-4d41-80d4-72e8917b29ad" />
+        <suppliersInternal>
+          <interfaceRealization Id="c75d9dbc-c932-4350-821d-772d45fe42b5">
+            <interfaceMoniker Id="7453695e-3352-4fac-b653-c701d67f1424" LastKnownName="IState" />
+            <elementDefinition Id="41945473-24c4-4204-b684-33dd95305355" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="e1769e57-d19a-4a0d-87ce-616d1ba86065" name="Method" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7a45e2e3-40fc-4af0-9004-41d69283890b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3ebc9b2e-cd98-4c11-9dd8-ec30bbc45542" name="Context" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ffa0ab4c-c4b8-4f6d-816a-48d908b56d82" />
+        <targetEnds>
+          <association Id="8f4cb9c5-d86f-4775-b81e-52b0427c238f" isDerived="false" sourceEndRoleName="Context" targetEndRoleName="IState" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="7453695e-3352-4fac-b653-c701d67f1424" LastKnownName="IState" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cfa0fe69-e2f0-41f1-9a60-4b8b4d803824" name="Context" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d7d66d6d-2f4d-4373-8f21-dd675475c46c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="08b44a47-8840-438f-8f04-6800ece5f87a" name="IState" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="00d5e27a-2f5c-4140-ae78-2f2e9d7dea2e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f258e57f-7795-4664-9b65-9d4ff47338cd" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="75608700-e797-4cba-b443-1ec1651239b3" name="state" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a7642ad5-8068-49c0-b5da-12b142733859" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7ec10d94-8f41-4798-aa58-23abe94e7343" LastKnownName="IState" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="68715002-69f3-4796-b980-7c9a1c59c897" name="Method" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b8992a61-626d-40ed-8e86-fba20813a488" />
+          </operation>
+          <operation Id="d7861d24-ffba-4704-911c-a6a98cfdf6a2" name="SetState" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="23b7a867-b045-4fb4-b351-9d986e36e229" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c610437f-c048-4280-a491-830a3d422e63" name="state" direction="In">
+                  <elementDefinition Id="8c5d5d7f-0595-41a8-8b61-ddacc1122e56" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7ec10d94-8f41-4798-aa58-23abe94e7343" LastKnownName="IState" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="7ec10d94-8f41-4798-aa58-23abe94e7343" name="IState" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::IState">
+        <elementDefinition Id="febfb754-0930-4e74-8434-5c635f247dde" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="8e4ed5c9-69fd-4090-a14a-d8a8c039a263" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2f25286f-be67-4b03-b198-047fdfe78828">
+        <profileInstance Id="d3aaab41-2e2e-4904-b811-378f58dd6305" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="a8c7962e-8306-4550-9016-dcf4e30a7706">
+        <profileInstance Id="feada81d-d2b0-449b-9b7e-bc9257e76124" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

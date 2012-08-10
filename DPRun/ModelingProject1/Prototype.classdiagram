@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9d3612d9-d7a3-4d34-a61b-94c2869118c0" name="Prototype" linkedPackageId="faabaecf-2a52-4964-a1d9-cbb67e1b4707" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="97c6744e-57d7-4647-96f7-a7824c13cced">
+      <elementDefinition Id="671db95e-bba6-4dd1-8349-4a8410000a54" />
+      <body>IPortotype p = Protype.Clone()</body>
+      <annotatedElements>
+        <classMoniker Id="20015632-8c15-48f5-995d-58f4a0572de1" LastKnownName="Client" />
+      </annotatedElements>
+    </comment>
+    <comment Id="8cdc6726-daae-41ee-b66d-4bcd5b981fd2">
+      <elementDefinition Id="ca991bfb-0623-4a79-bb09-54894d6026c9" />
+      <body>返回自己的副本</body>
+      <annotatedElements>
+        <classMoniker Id="78d49203-7cc1-4b0b-bdce-34172a3652ac" LastKnownName="Prototype" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="2859242f-cf53-4064-aacd-77cfb7db4a9b">
+      <profileInstance Id="3eaf3a54-cffb-4b1f-a7ee-d25391e2d095" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a0d145d8-38a7-48f1-b1f6-e400c1fc2848">
+      <profileInstance Id="8ed1a689-d598-4390-921f-aab133fb5e93" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="a3433a23-5948-465c-8c21-a7c74ec65480" name="IPrototype" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="50e02fd9-bece-46a6-beb4-91d50f375df3" />
+        <ownedOperations>
+          <operation Id="c6680d6d-17da-4c80-af7e-4bc5ec5c6197" name="Clone" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4c49b240-6a6d-462e-84ef-e47a534c0f3a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7e1f2497-60ae-47f0-9e95-47841e061a97" direction="Return">
+                  <elementDefinition Id="236c948f-41ea-42f7-83f2-92ac37322cbc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f3c70b70-885b-4dbe-b112-fead0baa20f1" LastKnownName="IPrototype" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="78d49203-7cc1-4b0b-bdce-34172a3652ac" name="Prototype" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="381b74d9-c25f-4ce5-b0a6-66425fe0c3c8" />
+        <suppliersInternal>
+          <interfaceRealization Id="b76eb70d-4462-46d8-85e4-73399b56906f">
+            <interfaceMoniker Id="a3433a23-5948-465c-8c21-a7c74ec65480" LastKnownName="IPrototype" />
+            <elementDefinition Id="ef0348ef-d800-43c9-8882-854436463bdb" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="f49e6da2-2433-4dc8-90ff-9a99d8a38feb" name="Clone" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a4f26085-6f64-47a5-80c2-3f7bf89a69ef" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5652b9db-294b-48cf-a799-65083647db10" direction="Return">
+                  <elementDefinition Id="b88b98f5-e1cd-4c99-b32c-257c396de8e7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f3c70b70-885b-4dbe-b112-fead0baa20f1" LastKnownName="IPrototype" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="20015632-8c15-48f5-995d-58f4a0572de1" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2422cee8-283f-4c1c-b1dd-d97897752ce7" />
+        <suppliersInternal>
+          <dependency Id="fee18cd1-1fd5-41ba-a236-30b664dfae6e">
+            <interfaceMoniker Id="a3433a23-5948-465c-8c21-a7c74ec65480" LastKnownName="IPrototype" />
+            <elementDefinition Id="04a7b668-4dd6-4f26-8537-16043152a916" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="659bc48e-b8bd-45b6-b9f3-19ce2d2c3c1e" name="Method" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cfa44ac9-8f07-44bb-b8b5-e7285f3bc72a" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="f3c70b70-885b-4dbe-b112-fead0baa20f1" name="IPrototype" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::IPrototype">
+        <elementDefinition Id="50e02fd9-bece-46a6-beb4-91d50f375df3" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="faabaecf-2a52-4964-a1d9-cbb67e1b4707" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>

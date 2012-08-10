@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="9286ce3d-fcbd-4a7c-9ce1-481e2efe589f" name="Iterator" linkedPackageId="16a1d001-933a-4719-8232-eabadf1612b7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="9b1b10f0-84a4-470a-afed-e3e89d4b3036" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="686772b9-c9dc-48bf-94e2-31aa0d18ae95" />
+        <suppliersInternal>
+          <dependency Id="d10c5dfb-350e-418a-9fb8-b553a640571d">
+            <interfaceMoniker Id="727a4e55-2882-4ecf-a0ba-a3195be94cd4" LastKnownName="Iterator" />
+            <elementDefinition Id="afaa951c-ce13-43b9-af7f-176234abd0d9" />
+          </dependency>
+          <dependency Id="e7ff76f9-987a-4d67-9e67-b6c8bbe12850">
+            <interfaceMoniker Id="c51cffca-d7af-4ddf-9de7-820b152bf90a" LastKnownName="Aggregate" />
+            <elementDefinition Id="a2ea9cc0-d5f8-476e-adf1-fc34f3d2c8df" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b459fcb9-8bba-4209-93e4-1107284cc57a" name="ConcreteIterator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="28bcec3f-194a-4574-a9a3-62ce75bf054f" />
+        <suppliersInternal>
+          <interfaceRealization Id="0ab4193e-5d6c-4aa5-a214-039dae2ce7b3">
+            <interfaceMoniker Id="727a4e55-2882-4ecf-a0ba-a3195be94cd4" LastKnownName="Iterator" />
+            <elementDefinition Id="e356dba6-d23c-4b22-922b-745e6e81c809" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="532f1ba4-3373-499e-acc5-e55b4f0d998d" name="agg" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fef68da3-e996-47c4-8ea6-590e7a599b19" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8e889427-27e6-42cc-b098-d140dff7d582" LastKnownName="ConcreteAggregate" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="cacda4c9-07f1-4319-9083-5e3fb52b5609" name="First" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b028b890-7c1d-47b1-a92e-02ce10e1c288" />
+          </operation>
+          <operation Id="27303607-0ea3-4465-a611-84f54ee55007" name="Next" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3f0b23e1-f93d-4775-bad5-956055993abf" />
+          </operation>
+          <operation Id="4e3cf9e5-9c32-4e76-a33e-d254aa6eab12" name="IsDone" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5d1c13cb-3bff-4c5e-9728-6e4ed8508f26" />
+          </operation>
+          <operation Id="fdfe7e28-cb85-4b55-a28c-26490b917729" name="CurrentItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="94a15597-c477-41e2-827b-1b05ad0607ee" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="727a4e55-2882-4ecf-a0ba-a3195be94cd4" name="Iterator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bbb2d338-3ab2-4c3e-bd95-88f2fa3badd6" />
+        <ownedOperations>
+          <operation Id="b2e3e2d8-d419-4ea1-b742-9ff708ee25ce" name="First" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ed52b547-692f-4271-8412-96149f34fb67" />
+          </operation>
+          <operation Id="c201cf47-a100-4b32-9368-19eadc23964d" name="Next" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7c4b8b61-9a88-4e0c-9d5a-c83f738f1e55" />
+          </operation>
+          <operation Id="109a98fb-c79f-4740-b793-a5b2fa551493" name="IsDone" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="80f439e0-938f-47a2-bda2-3c3f7c97f369" />
+          </operation>
+          <operation Id="7fcc022a-e73a-49d8-894a-43e922a077bd" name="CurrentItem" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ee940385-52dc-4458-97d7-271fbda7e6e3" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2a29adc5-00a2-4cb1-93a0-c182c6d99157" name="ConcreteAggregate" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0b0a9eed-aafc-4537-b35f-0123427ab8fe" />
+        <suppliersInternal>
+          <interfaceRealization Id="71f6cf33-c123-46d1-aa87-f414a167b504">
+            <interfaceMoniker Id="c51cffca-d7af-4ddf-9de7-820b152bf90a" LastKnownName="Aggregate" />
+            <elementDefinition Id="55725a8e-e24c-4a21-9d7b-cb2795f93d27" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="8bcdd4d7-2bc2-4532-9212-72ef303534a8" name="CreateIterator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7b2d93a1-6776-4d51-b78a-51820503abe9" />
+          </operation>
+          <operation Id="abb28368-7e6f-470e-b073-5f57d6b44317" name="CreateIterator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f6ea409a-c943-459b-a8d5-050ff9e861bd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bd545227-997e-40b0-9a74-1753462cb99d" direction="Return">
+                  <elementDefinition Id="88172b58-664e-47d8-ad86-e4f297dd5690" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e9d09290-5c50-4516-b625-e961dc8b38eb" LastKnownName="Iterator" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="8e889427-27e6-42cc-b098-d140dff7d582" name="ConcreteAggregate" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::ConcreteAggregate">
+        <elementDefinition Id="0b0a9eed-aafc-4537-b35f-0123427ab8fe" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="75dee6d4-1ce4-40d6-98da-10759cbe12e9" name="Iterator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4ccf73ae-d725-47d8-b8c4-70c95e64a2ec" />
+        <ownedOperations>
+          <operation Id="ea17d75f-e715-401a-bdf8-e40edf24f082" name="First" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="66c24ede-7de0-4ea4-8c47-3d4c86fb669c" />
+          </operation>
+          <operation Id="84c86b98-3110-470c-8929-470f00ec74cc" name="Next" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e9efa0dd-7686-4f45-83bf-47044aa7938f" />
+          </operation>
+          <operation Id="28086cfe-e3bd-4f8e-acaa-420b77b1df56" name="IsDone" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="369627a4-6ac0-4d39-8096-ca997c7cfada" />
+          </operation>
+          <operation Id="4757a352-5390-4f2c-9ea6-fe176c99fc9c" name="CurrentItem" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d3402a4d-b509-4fa4-9966-d9a28a759354" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dbbb6ceb-37ef-4563-a112-446c4b1d2cb4" name="ListIterator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="be9434a0-4914-4669-adf3-89b9771de967" />
+        <suppliersInternal>
+          <interfaceRealization Id="88533e49-d0e2-4f7a-bf36-6769bc0dd509">
+            <interfaceMoniker Id="75dee6d4-1ce4-40d6-98da-10759cbe12e9" LastKnownName="Iterator" />
+            <elementDefinition Id="1a851e1f-499a-4b5d-b2ae-2fdf484493f9" />
+          </interfaceRealization>
+          <dependency Id="5a6060ea-a0de-4793-83ac-6977b4dea2ae">
+            <classMoniker Id="d88d1c2e-efa7-4ef2-9998-6803084fbd2b" LastKnownName="List" />
+            <elementDefinition Id="9a92064b-fe34-4a7d-bccf-d732c526667d" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="213e99fe-ec18-4487-800c-6bbd3cde9f8b" name="list" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="809850af-746c-47cf-829a-8bb210fb3989" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8ff299f3-b065-41cc-bd3f-c8ca018af972" LastKnownName="List" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="f204692e-cf24-494f-bfe4-a9d9ed934154" name="First" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c6fb07bf-e2d5-4192-92d2-f8f3dd9ed176" />
+          </operation>
+          <operation Id="73505990-fd04-42d9-bb0d-26b3c57f2721" name="Next" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2c05953b-53c0-4421-a7d1-76181587fbae" />
+          </operation>
+          <operation Id="7a694633-bd3e-41c4-99f7-27897eb715c7" name="IsDone" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="37bc9cff-f50a-4939-937e-fc5f702ed6de" />
+          </operation>
+          <operation Id="d7cbab55-94fd-4193-8bad-89d83ce0d6f0" name="CurrentItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c179e8db-7980-402b-85f3-da2881d38baf" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="385cefe7-cc99-4aaa-ae3f-58ea9f3c240b" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="35c09b63-3bf4-4659-9eb9-52fb8d9e310a" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="84ece094-460f-4011-a288-90b3cfa353e2" name="AbstractList" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="33288b82-25f5-4e22-9d99-7849b7e83b4a" />
+        <ownedOperationsInternal>
+          <operation Id="c9ad4dc3-5a99-4f24-8888-14e616cf2840" name="CreateIterator" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e0fdcf18-5915-4dba-a0d6-cc7f95066d63" />
+          </operation>
+          <operation Id="3bbffb57-434f-4cd0-9371-7db4a30fac22" name="Count" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ac8c8a34-1e69-45f4-a476-2b2f78b63873" />
+          </operation>
+          <operation Id="632ad2de-2dde-4f66-a12e-4ade0aa6f3ca" name="Append" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fbb8e21c-f889-464c-b7e2-613c8e0fb5c8" />
+          </operation>
+          <operation Id="bdd50f8e-e09f-4b6f-9cc0-b55641118a35" name="Remove" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e3870032-0662-4412-ad8a-ae3a0dd94741" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d88d1c2e-efa7-4ef2-9998-6803084fbd2b" name="List" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9d96b791-7cbe-4059-93a2-40961f834018" />
+        <generalsInternal>
+          <generalization Id="bb80d00c-70aa-4bd6-9d39-f831a102891c" isSubstitutable="false">
+            <classMoniker Id="84ece094-460f-4011-a288-90b3cfa353e2" LastKnownName="AbstractList" />
+            <elementDefinition Id="1d56cb91-bc6a-4887-b7e5-938bfaa8298c" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d8dca102-aad4-4058-a44a-ccd01fb3c01a" name="SkipList" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d0abc65c-b7e8-43c5-8b46-9e9cb86b4b2d" />
+        <generalsInternal>
+          <generalization Id="220f88d2-84b7-4b15-b695-b0a58da48c9d" isSubstitutable="false">
+            <classMoniker Id="84ece094-460f-4011-a288-90b3cfa353e2" LastKnownName="AbstractList" />
+            <elementDefinition Id="3f387f77-0cb6-470c-9c01-5d49fc3a1dae" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e0b747ae-2285-4de8-b840-564d7680e0b7" name="SkipListIterator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ff29d116-1dc7-472a-85ce-009a05e27d0a" />
+        <suppliersInternal>
+          <interfaceRealization Id="7271d115-502d-4c1a-8d2c-7d13615604f6">
+            <interfaceMoniker Id="75dee6d4-1ce4-40d6-98da-10759cbe12e9" LastKnownName="Iterator" />
+            <elementDefinition Id="18c2faa2-e1f2-4271-bd6a-1f036a32dbf2" />
+          </interfaceRealization>
+          <dependency Id="36b087c2-99b9-4498-a36b-5a41737a4e61">
+            <classMoniker Id="d8dca102-aad4-4058-a44a-ccd01fb3c01a" LastKnownName="SkipList" />
+            <elementDefinition Id="c44285ac-41a7-47cb-aa07-ba565ce37887" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="7b24bcf5-8207-468d-8fbf-9ecf76a4ab11" name="skipList" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7a3b53b0-9c3e-4e6f-809b-af7bd2c22c0a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="82491a7b-e0e8-495c-ad8f-b70aadfddb43" LastKnownName="SkipList" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="f6106e6d-ad90-4e0e-bc89-b20cc6c68c8c" name="First" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="53b0acaf-c9eb-4012-a9dc-9ab77408ca2a" />
+          </operation>
+          <operation Id="d51edb81-876d-47e8-9c85-ba67b30fa250" name="Next" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d35d3739-1119-4f9f-8c3e-4930748e7b61" />
+          </operation>
+          <operation Id="07960323-a106-4bc6-8383-4a70b0cd2d7e" name="IsDone" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b7a9a141-fe15-4579-b459-a95f0f9a04e2" />
+          </operation>
+          <operation Id="13fe9e63-066d-4ab8-a26b-5bae317ce96e" name="CurrentItem" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2161801d-b79b-4adb-9c63-d4745b2f3b7d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="8ff299f3-b065-41cc-bd3f-c8ca018af972" name="List" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::List">
+        <elementDefinition Id="9d96b791-7cbe-4059-93a2-40961f834018" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="82491a7b-e0e8-495c-ad8f-b70aadfddb43" name="SkipList" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::SkipList">
+        <elementDefinition Id="d0abc65c-b7e8-43c5-8b46-9e9cb86b4b2d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="c51cffca-d7af-4ddf-9de7-820b152bf90a" name="Aggregate" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fc0629cf-244e-4bc9-a449-d2b3464fc34b" />
+        <ownedOperations>
+          <operation Id="d7699a12-2ddf-4d44-aa05-1fcbf70c2d57" name="CreateIterator" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="66ee2cef-eacf-4e4e-91fa-03d1eb41efea" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="687b53ca-3c88-4ee1-aa70-f049a2cf25d4" direction="Return">
+                  <elementDefinition Id="d1f6dbb7-251b-4762-af0b-b78464608fcf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="e9d09290-5c50-4516-b625-e961dc8b38eb" LastKnownName="Iterator" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="e9d09290-5c50-4516-b625-e961dc8b38eb" name="Iterator" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::Iterator">
+        <elementDefinition Id="bbb2d338-3ab2-4c3e-bd95-88f2fa3badd6" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="16a1d001-933a-4719-8232-eabadf1612b7" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+    <profileInstances>
+      <packageHasProfileInstances Id="5720bec5-4051-408d-8687-aa2afadb3911">
+        <profileInstance Id="deb10e5f-eb0b-4f05-92ce-7a8da78b5cf8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="71e7164d-4509-4c4b-8d51-9058e7b0fe85">
+        <profileInstance Id="838fce75-1622-4fdd-863c-8566748b8f8f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

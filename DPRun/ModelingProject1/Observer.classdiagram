@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="0d1ca248-bb3d-42d9-912e-e9989151dab6" name="Observer" linkedPackageId="0e064788-f24a-444a-854b-0e82b621dad3" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="c9408c89-3f14-4c71-9225-77648b715d14">
+      <profileInstance Id="b0c35831-7a74-422f-bdf0-c00bde41a949" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c065ad43-a2fe-4989-913e-f6a8cf8afed5">
+      <profileInstance Id="e61a0aad-5866-4eab-99d8-bb5a76035997" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="550f7953-caa5-41f1-8810-392c118bca57" name="Subject" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6c584e79-95bb-46cd-9133-292d7a746eeb" />
+        <ownedOperations>
+          <operation Id="57326023-c182-4ea3-86f2-ea3f8db8cf41" name="Attach" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c99ce6f4-6d92-4fcd-b847-5b28b2c32d6b" />
+          </operation>
+          <operation Id="fb21bd15-524a-4a11-ba09-23a4a9809771" name="Detach" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d1976e75-2229-4ed5-bf3d-4666859b9786" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="03fe0bd8-1b71-4dd1-a186-f5975017d442" name="Observer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a9b0b2c2-3752-48e6-b284-569097672ff0" />
+        <ownedOperations>
+          <operation Id="dce500ed-d8c8-4db4-b6f5-203f1bd4f13a" name="Update" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fbde240b-8866-4e32-ba71-94b0496256e4" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2a0d2158-e5ba-4184-a3bf-678e584e73a3" name="ConcreteSubject" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="73eed860-c6c9-4468-9130-0781a7ca306f" />
+        <suppliersInternal>
+          <interfaceRealization Id="734222c4-43f2-4d04-a7ab-ba542a65d474">
+            <interfaceMoniker Id="550f7953-caa5-41f1-8810-392c118bca57" LastKnownName="Subject" />
+            <elementDefinition Id="a3fc839e-01ed-4cc3-80b6-bce908ee9840" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="6d50b0d3-3966-484c-80b8-77e08afe67bd" isDerived="false" sourceEndRoleName="ConcreteSubject" targetEndRoleName="Observer" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="03fe0bd8-1b71-4dd1-a186-f5975017d442" LastKnownName="Observer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9ba28ec1-c465-40db-a34b-8dfc7ad660ae" name="ConcreteSubject" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3fe9eb15-04ad-430d-8d17-f08fa4431e8e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d8008ec0-5de4-41a7-bf92-4539b753c0ff" name="Observer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="1218bb5d-a44d-486d-8ac5-cf8cc557a269" name="Lower" value="*">
+                      <elementDefinition Id="0f1f136a-df10-4885-88d2-cd44ee72be20" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="53ab2897-73f9-46c3-a30b-006d21ade48f" name="Upper" value="*">
+                      <elementDefinition Id="15b510a4-06fc-4f2b-8d6d-96c7227b2a0c" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="6fb6df85-6098-4b07-b8fd-0c37176d1713" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="aaeb11da-e91d-47db-a979-812010ee6c87" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="ec3a18eb-2e0c-4a9d-a000-24be78d9410d" name="Attach" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="52950a43-00b0-4994-876e-6c78a8898e0e" />
+          </operation>
+          <operation Id="91dcc6ff-a133-4d18-a7df-47764ee2867c" name="Detach" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="dab1d0da-86ae-4a70-a93f-cf3262668a45" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ea22393c-1217-4e9b-93e4-c0bd36b880ff" name="ConcreteObserver" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="271f7ec3-7292-499c-8d78-2e140199a7ca" />
+        <suppliersInternal>
+          <interfaceRealization Id="5c8ce70e-a0e7-4072-a070-51fc1cca6ba0">
+            <interfaceMoniker Id="03fe0bd8-1b71-4dd1-a186-f5975017d442" LastKnownName="Observer" />
+            <elementDefinition Id="43e3e0c2-f899-48d4-afb1-3a1b2db3d25f" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="60d4513e-4ad9-4708-a1ee-75470b3e4341" name="Update" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a41c33aa-c753-46dd-9394-1a7a724121cd" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="0e064788-f24a-444a-854b-0e82b621dad3" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>

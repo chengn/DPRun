@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="7800a8ef-b308-4ab8-a920-9b8966969466" name="temp" linkedPackageId="d6ba064f-632f-42ac-8c4a-cf049dc770ae" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="820de07b-8857-4496-90f3-a416eb88ea33">
+      <profileInstance Id="441efa36-fbad-482c-91ff-222d650420cf" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d15b32fe-57a1-424c-9da4-a2e955bf3f1e">
+      <profileInstance Id="45708d7a-1f7d-4b82-80f4-546f53e24d59" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="00a6c08e-8c16-4289-8724-c92944eaa2a7" name="美猴王" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e1d14379-9f51-4c2e-a522-d051ed4fffa2" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="114a72c6-17d9-42b6-b871-b6e7bbf37cfa" name="孙悟空" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9bf8814a-4f60-40b4-8d9a-5be665df4d81" />
+        <suppliersInternal>
+          <interfaceRealization Id="8f10179e-4d09-45fa-a56b-0ed6f258cf0b">
+            <interfaceMoniker Id="00a6c08e-8c16-4289-8724-c92944eaa2a7" LastKnownName="美猴王" />
+            <elementDefinition Id="085fe65e-7339-4e09-ad59-24d539cef453" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ff5f74ae-d381-4038-880a-02e90254b6fe" name="变化" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c28bd6e3-51f6-430d-a3e3-527d4b43bd87" />
+        <suppliersInternal>
+          <interfaceRealization Id="f4fbdc59-7cb1-4ab5-ae13-2433084e72d4">
+            <interfaceMoniker Id="00a6c08e-8c16-4289-8724-c92944eaa2a7" LastKnownName="美猴王" />
+            <elementDefinition Id="c6c72376-b6cb-4f44-91cb-3e1c06d41879" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="0957d20b-e4ff-4d34-a634-10f64ba11b66" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="00a6c08e-8c16-4289-8724-c92944eaa2a7" LastKnownName="美猴王" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aa52fefe-203f-47e2-b667-fcbc524d2474" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a6cb8a27-1b96-4b59-b661-d80347b66e2e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ba2524c5-af08-45e1-8725-8c3a35797557" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ff558dff-b3a2-4b73-8f9f-4f94d50e6a1f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8d446600-86ca-4977-8e53-aac6d885a8d8" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="64cf6428-2546-4234-9748-9b28c6ff1a57" name="花" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="66904f45-4af7-43ef-bebe-61be80a0fcd4" />
+        <generalsInternal>
+          <generalization Id="c9072ae7-863e-4dde-9981-b8b4b9458db7" isSubstitutable="false">
+            <classMoniker Id="ff5f74ae-d381-4038-880a-02e90254b6fe" LastKnownName="变化" />
+            <elementDefinition Id="9a40b196-a3ee-4ff3-96c5-4d23415db219" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b5ea83b5-e765-4ece-b7a7-951e5c3f9b81" name="鸟" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7b22532c-3da9-49cb-9f79-f1896d5bea7c" />
+        <generalsInternal>
+          <generalization Id="0dd1d7f1-ef29-40a0-84c2-046d4184e282" isSubstitutable="false">
+            <classMoniker Id="ff5f74ae-d381-4038-880a-02e90254b6fe" LastKnownName="变化" />
+            <elementDefinition Id="7cae28ae-4d51-451e-a59a-572f680d91f0" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a4597c00-db5d-49cc-8691-7d0b052ef2a2" name="鱼" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="19440781-f3da-4bb8-90ec-7ed8714f84e2" />
+        <generalsInternal>
+          <generalization Id="fa113f79-26c7-4778-a360-52ce5a9fc08a" isSubstitutable="false">
+            <classMoniker Id="ff5f74ae-d381-4038-880a-02e90254b6fe" LastKnownName="变化" />
+            <elementDefinition Id="bceafd23-ff84-47c9-bbe8-4356d9ed415a" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b97f823c-8c49-4bd0-84ed-c3e3998acac0" name="虫" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="adc538c9-d19a-4ea3-8499-9287b031aeb2" />
+        <generalsInternal>
+          <generalization Id="c1711087-9ac8-4ca7-83bc-65e539f8b487" isSubstitutable="false">
+            <classMoniker Id="ff5f74ae-d381-4038-880a-02e90254b6fe" LastKnownName="变化" />
+            <elementDefinition Id="83a49783-3bb8-402f-aa7f-65d1de0f1d4f" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="d6ba064f-632f-42ac-8c4a-cf049dc770ae" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="1e69ef62-bef3-4b09-a130-8d8717c803e2" name="AbstractFactory" linkedPackageId="16d7db5e-ed0e-4f72-9f9d-970b257dc5b9" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="fa1003d2-e984-4cf2-bdbd-6463a12e5825">
+      <profileInstance Id="aac03ea7-4b4f-41c5-b7d0-892a6da670bb" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4592cdad-7817-47e5-9372-438ebe96b145">
+      <profileInstance Id="0d7f0207-e0ca-44bf-b47b-d7b5acf5384b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="ec3fcce3-95d1-4d73-980d-96deb8a8e736" name="Factory" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="743eb18e-9bf3-4534-870d-e1c937a38b2b" />
+        <suppliersInternal>
+          <dependency Id="c3b531b3-0119-47d0-91ac-eebc6f76fe2c">
+            <interfaceMoniker Id="3ed0ae94-e55a-4dac-b6e8-89a09b4dc3bc" LastKnownName="ProductB" />
+            <elementDefinition Id="22a34b0c-5b03-4a95-a631-ea292ae2672d" />
+          </dependency>
+          <dependency Id="15da4400-72f0-4584-b93d-eb2f20d250c6">
+            <interfaceMoniker Id="a4934fc7-10fb-483a-8fea-76205b8b92ae" LastKnownName="ProductA" />
+            <elementDefinition Id="99322250-0f90-43ac-85f6-db6ed5adc21e" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation Id="16df7680-e1c8-465a-869c-6bd21c119e37" name="CreateProductA" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9aa38652-a18e-40ea-a73b-8bec5bb9a4cf" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a422ab1c-085f-47ca-88ee-bff33bf1d379" direction="Return">
+                  <elementDefinition Id="fac33367-31c7-4d1e-abad-393a0d9364a4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="867656ac-a822-4d60-b7a4-b73d737bbe38" LastKnownName="ProductB" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="006c9c4a-c599-429f-83bd-c01980ff044a" name="CreateProductB" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4fe6391b-8983-4196-8d5a-1e3c6153f541" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e53fc52d-2950-401d-a9a9-c2909735239f" direction="Return">
+                  <elementDefinition Id="4f3c7a8f-ca42-4387-9951-8704873dc5e9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c199568b-2010-4708-a55b-9435dad5168a" LastKnownName="ProductA" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="a4934fc7-10fb-483a-8fea-76205b8b92ae" name="ProductA" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4daa2c10-95e7-47d7-8cb6-1cde4fa8b482" />
+        <ownedOperations>
+          <operation Id="5c894514-f358-45da-8cfe-8dc3a488a3b3" name="Operation" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2908ada3-451d-4d9f-a6d6-c51baf42a2ed" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="3ed0ae94-e55a-4dac-b6e8-89a09b4dc3bc" name="ProductB" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b2e98890-5f37-4053-b724-8ce39f277d16" />
+        <ownedOperations>
+          <operation Id="448b0535-2b2e-47a9-af79-27f80f1d3fe8" name="Operation" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="334128ff-e83e-4048-8a74-ccaf7abd4c5b" />
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="c199568b-2010-4708-a55b-9435dad5168a" name="ProductA" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::ProductA">
+        <elementDefinition Id="4daa2c10-95e7-47d7-8cb6-1cde4fa8b482" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="867656ac-a822-4d60-b7a4-b73d737bbe38" name="ProductB" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::ProductB">
+        <elementDefinition Id="b2e98890-5f37-4053-b724-8ce39f277d16" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ecc0b4c2-315d-4326-94de-83b43a922b8b" name="Factory1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d68ef01f-aa46-4b76-953c-1280d1899f08" />
+        <suppliersInternal>
+          <interfaceRealization Id="568b17d5-de6a-4532-89de-da341f78c05c">
+            <interfaceMoniker Id="ec3fcce3-95d1-4d73-980d-96deb8a8e736" LastKnownName="Factory" />
+            <elementDefinition Id="71704248-9b8d-46f0-9646-da14ebc359ee" />
+          </interfaceRealization>
+          <dependency Id="093e91d7-61a8-49bf-b99d-2f30b42be40e">
+            <classMoniker Id="e2a63ec6-d05e-497a-be6a-8022166c8137" LastKnownName="ProductA1" />
+            <elementDefinition Id="1e740bdb-b1e6-4abd-ad07-6e2dbfa3cd9a" />
+          </dependency>
+          <dependency Id="754cdeb1-2056-4587-92fc-99a2ab9a2447">
+            <classMoniker Id="20965697-3dba-477b-b29c-799b3e007e99" LastKnownName="ProductB1" />
+            <elementDefinition Id="141a9adb-a7ce-4102-9ee6-b98955af4559" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="03541686-40f1-4777-b682-b1a74780f453" name="CreateProductA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="06e3e67b-e38c-44fd-b2ec-3803c9fb6aa1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="78930f1e-c252-4803-a5dc-80ff46a8b986" direction="Return">
+                  <elementDefinition Id="8bd59789-61a6-4c3f-8f79-d4a627485734" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="867656ac-a822-4d60-b7a4-b73d737bbe38" LastKnownName="ProductB" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4ddcd677-f9d5-4dcf-bd64-3e54de5f7e59" name="CreateProductB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0a519dfd-232e-4aa4-8546-845ee8212d42" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4789c0fb-eda3-461f-acca-1792b0a1a7fd" direction="Return">
+                  <elementDefinition Id="a9db7451-ea72-4fd8-935a-766b9909cc28" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c199568b-2010-4708-a55b-9435dad5168a" LastKnownName="ProductA" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="efe82508-baa1-4550-9c6a-522745119aef" name="Factory2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ce298ac4-56c0-4d3d-b395-7fe29831dd4f" />
+        <suppliersInternal>
+          <interfaceRealization Id="3b7f5724-632a-4918-a625-a65b529fb202">
+            <interfaceMoniker Id="ec3fcce3-95d1-4d73-980d-96deb8a8e736" LastKnownName="Factory" />
+            <elementDefinition Id="7910c955-9d2f-437e-b6e0-0eac95061825" />
+          </interfaceRealization>
+          <dependency Id="667793ff-ce6f-4a5d-bd57-51f8c3b1877d">
+            <classMoniker Id="8d8136ab-85eb-47e8-8be6-2564cf3b817c" LastKnownName="ProductA2" />
+            <elementDefinition Id="21c43fec-49b1-4b14-8444-8b166506bfdf" />
+          </dependency>
+          <dependency Id="878522a5-2f81-45f8-ba14-06517f5539d0">
+            <classMoniker Id="045c6652-1b88-4319-b650-fa98a0cfddf9" LastKnownName="ProductB2" />
+            <elementDefinition Id="47d290b2-0467-44a4-9bd0-c8daacb6c87b" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="e7dbdba1-de98-4f3d-bb39-09841a4f2d2e" name="CreateProductA" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="230d9f1a-3e0f-4219-9766-e4b2857b900c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f44ff789-fe98-425e-a2db-cccfedd9c018" direction="Return">
+                  <elementDefinition Id="3840b368-aa62-47c5-a2eb-905156a21ff2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="867656ac-a822-4d60-b7a4-b73d737bbe38" LastKnownName="ProductB" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="2d769932-4fc7-40c1-a5ae-c2021964d31c" name="CreateProductB" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c089b995-4dbb-425c-b56d-61810da1a3d0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e015aae7-9757-4b4a-90f7-c36fd8d8e5a7" direction="Return">
+                  <elementDefinition Id="fa082297-da1c-41db-864c-9bc0239eee9d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c199568b-2010-4708-a55b-9435dad5168a" LastKnownName="ProductA" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e2a63ec6-d05e-497a-be6a-8022166c8137" name="ProductA1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9d6fd77b-38a7-49ed-861f-68a717260992" />
+        <suppliersInternal>
+          <interfaceRealization Id="9a9963f2-ef9b-4878-a47e-6d9b0869f14a">
+            <interfaceMoniker Id="a4934fc7-10fb-483a-8fea-76205b8b92ae" LastKnownName="ProductA" />
+            <elementDefinition Id="2686b7da-79f3-449c-b08a-92459d748f23" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="03faaf37-dbc3-4466-873c-849b33f0557b" name="Operation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1d6d7ac9-2f4a-4635-b57f-06b137eba1be" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8d8136ab-85eb-47e8-8be6-2564cf3b817c" name="ProductA2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ce4bb3b9-86f4-46c5-8268-da2d9342402e" />
+        <suppliersInternal>
+          <interfaceRealization Id="8f8be091-ac67-4528-947f-4827a207a18d">
+            <interfaceMoniker Id="a4934fc7-10fb-483a-8fea-76205b8b92ae" LastKnownName="ProductA" />
+            <elementDefinition Id="470c629e-66b9-47f7-9562-ef03e70f5097" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="7d2b6ab1-643a-49b3-b712-5c07257f43f5" name="Operation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4eb8e411-ee6e-40fd-bc33-84edb3897472" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="20965697-3dba-477b-b29c-799b3e007e99" name="ProductB1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="92060460-9ae3-484e-88d6-9ddb86306127" />
+        <suppliersInternal>
+          <interfaceRealization Id="7b8c2129-0345-4dd2-9735-f2625fd3b51b">
+            <interfaceMoniker Id="3ed0ae94-e55a-4dac-b6e8-89a09b4dc3bc" LastKnownName="ProductB" />
+            <elementDefinition Id="f73ea7dc-e4d3-4286-8255-7db244265d52" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="6f4b301c-cdd2-44fe-b284-12a9b774272a" name="Operation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c088dd01-5922-40d6-8047-009e381c9525" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="045c6652-1b88-4319-b650-fa98a0cfddf9" name="ProductB2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="50edf2db-a1af-4eea-aaf4-e445851b775d" />
+        <suppliersInternal>
+          <interfaceRealization Id="7f5a87e9-e6dd-4c4d-8610-5a8b61920935">
+            <interfaceMoniker Id="3ed0ae94-e55a-4dac-b6e8-89a09b4dc3bc" LastKnownName="ProductB" />
+            <elementDefinition Id="b4f03a8f-33b0-4e1f-b5ae-7ab957a74885" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="056de435-c3b9-4cc0-94ec-a5b45a5a2c6e" name="Operation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3e034f54-63a8-4155-ba2d-f3db09e5ff09" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="16d7db5e-ed0e-4f72-9f9d-970b257dc5b9" name="ModelingProject1">
+    <elementDefinition Id="3d79ca67-0a39-4c63-b2a4-9a98ecf8e09b" />
+  </package>
+</logicalClassDesignerModel>
