@@ -1594,7 +1594,7 @@
     <packageHasNamedElement>
       <Interface
         Id="b8935937-9426-48f9-89a8-604291dba3c5"
-        name="Adaptee"
+        name="IAdaptee"
         isAbstract="false"
         isLeaf="false">
         <ownedOperations>
@@ -1645,7 +1645,7 @@
             Id="b72800a8-43d6-4a2f-b152-164899128dec">
             <interfaceMoniker
               Id="b8935937-9426-48f9-89a8-604291dba3c5"
-              LastKnownName="Adaptee"
+              LastKnownName="IAdaptee"
               LastKnownLocation="ModelingProject1.uml" />
           </interfaceRealization>
         </suppliersInternal>
