@@ -2487,7 +2487,7 @@
     <packageHasNamedElement>
       <Interface
         Id="e1d14379-9f51-4c2e-a522-d051ed4fffa2"
-        name="美猴王"
+        name="猴"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
@@ -2503,7 +2503,7 @@
             Id="085fe65e-7339-4e09-ad59-24d539cef453">
             <interfaceMoniker
               Id="e1d14379-9f51-4c2e-a522-d051ed4fffa2"
-              LastKnownName="美猴王"
+              LastKnownName="猴"
               LastKnownLocation="ModelingProject1.uml" />
           </interfaceRealization>
         </suppliersInternal>
@@ -2512,7 +2512,7 @@
     <packageHasNamedElement>
       <class
         Id="c28bd6e3-51f6-430d-a3e3-527d4b43bd87"
-        name="变化"
+        name="技能"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -2521,7 +2521,7 @@
             Id="c6c72376-b6cb-4f44-91cb-3e1c06d41879">
             <interfaceMoniker
               Id="e1d14379-9f51-4c2e-a522-d051ed4fffa2"
-              LastKnownName="美猴王"
+              LastKnownName="猴"
               LastKnownLocation="ModelingProject1.uml" />
           </interfaceRealization>
         </suppliersInternal>
@@ -2535,7 +2535,7 @@
             isAbstract="false">
             <interfaceMoniker
               Id="e1d14379-9f51-4c2e-a522-d051ed4fffa2"
-              LastKnownName="美猴王"
+              LastKnownName="猴"
               LastKnownLocation="ModelingProject1.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
@@ -2579,7 +2579,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="c28bd6e3-51f6-430d-a3e3-527d4b43bd87"
-              LastKnownName="变化"
+              LastKnownName="技能"
               LastKnownLocation="ModelingProject1.uml" />
           </generalization>
         </generalsInternal>
@@ -2598,7 +2598,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="c28bd6e3-51f6-430d-a3e3-527d4b43bd87"
-              LastKnownName="变化"
+              LastKnownName="技能"
               LastKnownLocation="ModelingProject1.uml" />
           </generalization>
         </generalsInternal>
@@ -2617,7 +2617,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="c28bd6e3-51f6-430d-a3e3-527d4b43bd87"
-              LastKnownName="变化"
+              LastKnownName="技能"
               LastKnownLocation="ModelingProject1.uml" />
           </generalization>
         </generalsInternal>
@@ -2636,7 +2636,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="c28bd6e3-51f6-430d-a3e3-527d4b43bd87"
-              LastKnownName="变化"
+              LastKnownName="技能"
               LastKnownLocation="ModelingProject1.uml" />
           </generalization>
         </generalsInternal>

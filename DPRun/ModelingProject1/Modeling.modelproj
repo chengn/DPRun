@@ -185,12 +185,12 @@
       <SubType>Content</SubType>
       <DependentUpon>Strategy.classdiagram</DependentUpon>
     </Content>
-    <Content Include="temp.classdiagram">
+    <Content Include="DecoratorExample.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="temp.classdiagram.layout">
+    <Content Include="DecoratorExample.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>temp.classdiagram</DependentUpon>
+      <DependentUpon>DecoratorExample.classdiagram</DependentUpon>
     </Content>
     <Content Include="TemplateMethod.classdiagram">
       <SubType>Content</SubType>
