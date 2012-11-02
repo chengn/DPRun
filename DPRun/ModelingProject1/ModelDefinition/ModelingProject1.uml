@@ -5546,6 +5546,13 @@
               LastKnownName="Iterator"
               LastKnownLocation="ModelingProject1.uml" />
           </interfaceRealization>
+          <dependency
+            Id="be042055-7f50-4fd1-8e5e-50861886caaa">
+            <classMoniker
+              Id="0b0a9eed-aafc-4537-b35f-0123427ab8fe"
+              LastKnownName="ConcreteAggregate"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property
@@ -5853,7 +5860,24 @@
         name="Client"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="5a95db94-7c25-41ce-8f23-5f8890fb48b7">
+            <interfaceMoniker
+              Id="4ccf73ae-d725-47d8-b8c4-70c95e64a2ec"
+              LastKnownName="Iterator"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="584ce7de-7702-4518-afd2-c0a496db52ca">
+            <classMoniker
+              Id="33288b82-25f5-4e22-9d99-7849b7e83b4a"
+              LastKnownName="AbstractList"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -6048,6 +6072,134 @@
           </operation>
         </ownedOperations>
       </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="808b980b-9e29-4663-adb8-bfc2758a0ce7"
+        name="Originator1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ff295dce-3809-47d4-980d-b0a388c62c49"
+            name="state"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="613fcb9d-e7b7-428d-b67f-0a0a55ced9b6"
+            name="CreateMemento"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="43716c0e-c3b0-4d22-aa97-74efd2965235"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e8fafe2a-803c-4e0e-8fd0-3698cebaa5d3"
+                      LastKnownName="Memento"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="904a474b-e97f-42e7-8d01-bb662208796f"
+            name="RestoreMemento"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="473d0a9a-1529-4dfc-9e3d-51e13f2f2f68"
+                  name="memento"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="e8fafe2a-803c-4e0e-8fd0-3698cebaa5d3"
+                      LastKnownName="Memento"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="91b2649f-8296-496a-887f-5b07a7540297"
+            name="GetState"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e06b1a1f-6d02-4262-8e4b-26baea1bf6cf"
+            name="SetState"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="db92280a-f29d-4be9-8e68-86f1a67551f4"
+        name="Memento1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="a76533bb-a162-4378-a75d-5167f9d4deec"
+            name="state"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8ff8bbe2-21c5-4cfe-9b04-afc38492333c"
+            name="GetState"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="522188d6-c246-4aed-8c66-b44312c3843e"
+            name="SetState"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

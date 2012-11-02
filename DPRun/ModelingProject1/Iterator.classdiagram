@@ -24,6 +24,10 @@
             <interfaceMoniker Id="727a4e55-2882-4ecf-a0ba-a3195be94cd4" LastKnownName="Iterator" />
             <elementDefinition Id="e356dba6-d23c-4b22-922b-745e6e81c809" />
           </interfaceRealization>
+          <dependency Id="ded7e0af-10e9-46e0-9657-de124bdc985d">
+            <classMoniker Id="2a29adc5-00a2-4cb1-93a0-c182c6d99157" LastKnownName="ConcreteAggregate" />
+            <elementDefinition Id="be042055-7f50-4fd1-8e5e-50861886caaa" />
+          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="532f1ba4-3373-499e-acc5-e55b4f0d998d" name="agg" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -161,6 +165,16 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="385cefe7-cc99-4aaa-ae3f-58ea9f3c240b" name="Client" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="35c09b63-3bf4-4659-9eb9-52fb8d9e310a" />
+        <suppliersInternal>
+          <dependency Id="0fbd3cad-fae5-43af-8220-e0a43cc4477f">
+            <interfaceMoniker Id="75dee6d4-1ce4-40d6-98da-10759cbe12e9" LastKnownName="Iterator" />
+            <elementDefinition Id="5a95db94-7c25-41ce-8f23-5f8890fb48b7" />
+          </dependency>
+          <dependency Id="2fd3c8c1-89d1-4c86-b6ef-47d3fa1af6dd">
+            <classMoniker Id="84ece094-460f-4011-a288-90b3cfa353e2" LastKnownName="AbstractList" />
+            <elementDefinition Id="584ce7de-7702-4518-afd2-c0a496db52ca" />
+          </dependency>
+        </suppliersInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Memento">
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.625, 8.5" name="Memento">
   <logicalClassDesignerModelMoniker Id="6dc6d8b0-2f18-42f2-ab16-8dd1b3f2d829" />
   <nestedChildShapes>
     <classShape Id="b5d2e84e-2470-40cb-a2b4-41aadbd79ad2" absoluteBounds="1.875, 0.75, 2.875, 1.7620442708333335" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
@@ -39,5 +39,19 @@
         <classShapeMoniker Id="43320d2e-2669-49f3-8d63-33317b1586df" />
       </nodes>
     </associationConnector>
+    <classShape Id="5f6021cf-965e-4352-8739-a24d6eda7090" absoluteBounds="9.5, 1.5, 2.875, 1.7620442708333335" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="cc080776-7ca3-4080-a001-46686407fa4c" LastKnownName="Originator1" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="15e2c5a4-53f9-4e68-bf73-537cb28ed1a9" absoluteBounds="9.515, 1.8900000000000001, 2.8449999999999998, 0.37974039713541663" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="a743e22e-3c68-4b8a-b025-a3de6761af0b" absoluteBounds="9.515, 2.2797403971354164, 2.8449999999999998, 0.88230387369791674" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6866b33d-cbed-4fee-9ba9-3e100e284bec" absoluteBounds="9.75, 4.25, 1.5, 1.4270019531249991" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="2cca490e-4e12-486a-a5c4-82781ab6164b" LastKnownName="Memento1" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="a55e6885-4581-48d3-a9f8-98f7325467c7" absoluteBounds="9.765, 4.64, 1.4700000000000002, 0.37974039713541663" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="063f70d3-286a-4934-b266-d098323c6b35" absoluteBounds="9.765, 5.0297403971354164, 1.4700000000000002, 0.54726155598958326" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </logicalClassDesignerDiagram>
